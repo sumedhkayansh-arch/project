@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">
+        <div class="log in">
+            <h1>Log in</h1>
+        </div>
+        <div class="inputs">
+        <form method="post">
+            {%csrf_token%}
+            <input type="text" name="username" placeholder="Enter your name"/>
+        <input type="email" name="email" placeholder="Enter your email id"/>
+        <input type="password" name="password" placeholder="Enter your password"/>
+        <button type="submit">Log in</button>
+        </form>
+        </div>
+    </div>
+</body>
+<style>
+    .title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 500px;
+        gap: 30px;
+        box-shadow: 0 4px 12px rgba(0,0,0,1);
+        border-radius: 10px;
+    }
+    input{
+        height: 40px;
+        width: 230px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    button{
+        background-color: blue;
+        color: white;
+        border-radius: 7px;
+        width: 89px;
+        height: 30px;
+        font-size: 17px;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(-45deg,lightblue,lightgreen, aqua,pink,yellow);
+        animation: hi 5s ease infinite;
+        background-size: 200% 200%;
+    }
+    @keyframes hi {
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 50% 100%;
+        }
+        100%{
+            background-position: 0% 50%;
+        }
+    }
+</style>
+</html>
